@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import SWIPER from "../../component/swiper/SWIPER.JSX";
+import SWIPER from "../../component/swiper/SWIPER.jsx";
 
 const Home = () => {
   return (
