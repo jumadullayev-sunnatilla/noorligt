@@ -21,7 +21,7 @@ const Header = () => {
       <div className="flex justify-between  text-[#A2A2A2] font-manrope font-semibold text-sm header__navigation">
         <ul className="flex gap-7 header__nav">
           <li>
-            <NavLink className={"header__item"} to={"/"}>
+            <NavLink className={"header__item"} to={"/about"}>
               o компании
             </NavLink>
           </li>
@@ -43,7 +43,7 @@ const Header = () => {
           </li>
 
           <li>
-            <NavLink className={"header__item"} to={"/about"}>
+            <NavLink className={"header__item"} to={"*"}>
               Блог
             </NavLink>
           </li>
@@ -91,15 +91,15 @@ const Header = () => {
         <div className="flex gap-3 header__about">
           <div className="flex items-center flex-col gap-1">
             <CiHeart />
-            <p>Избранное</p>
+            <p className="header__text_p">Избранное</p>
           </div>
-          <div className="flex items-center flex-col g-1">
+          <div className="flex items-center flex-col g-1 header__turn">
             <TbAntennaBars5 />
             <p>Сравнение</p>
           </div>
           <div className="flex items-center flex-col gap-1">
             <SlBasket />
-            <p>Корзина</p>
+            <p className="header__text_p">Корзина</p>
           </div>
         </div>
       </div>

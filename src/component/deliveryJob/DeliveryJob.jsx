@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./deliveryJob.css";
 import { NavLink } from "react-router-dom";
 import { DELIVERY__LIST } from "../../static";
@@ -31,4 +31,4 @@ const DeliveryJob = () => {
   );
 };
 
-export default DeliveryJob;
+export default memo(DeliveryJob);

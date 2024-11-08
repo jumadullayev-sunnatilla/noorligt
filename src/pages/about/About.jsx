@@ -1,7 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
+import Company from "../../component/company/Company";
+import Carousel from "../../component/corousel/Carousel";
 
 const About = () => {
-  return <div>bout</div>;
+  return (
+    <>
+      <Company />
+      <Carousel />
+    </>
+  );
 };
 
-export default About;
+export default memo(About);

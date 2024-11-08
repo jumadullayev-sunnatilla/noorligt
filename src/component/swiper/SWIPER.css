@@ -1,0 +1,15 @@
+.swiper__image {
+  width: 453px;
+  height: 453px;
+}
+
+.swiper__image1 {
+  width: 615px;
+  height: 400px;
+}
+.swiper__slide {
+  padding: 30px;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  margin-top: 50px;
+}

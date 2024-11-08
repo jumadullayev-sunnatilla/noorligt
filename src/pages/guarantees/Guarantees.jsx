@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 
 const Guarantees = () => {
   return <div>Guarantees</div>;
 };
 
-export default Guarantees;
+export default memo(Guarantees);

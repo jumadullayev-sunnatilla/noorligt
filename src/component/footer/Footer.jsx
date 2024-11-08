@@ -27,7 +27,7 @@ const Footer = () => {
           <h2 className="text-xl text-black font-bold">Покупателям</h2>
           <ul className="flex gap-5 header__nav flex-col">
             <li>
-              <NavLink className={"header__item"} to={"/"}>
+              <NavLink className={"header__item"} to={"/about"}>
                 О компании
               </NavLink>
             </li>

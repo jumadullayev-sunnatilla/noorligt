@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import DeliveryJob from "../../component/deliveryJob/DeliveryJob";
 
 const Delivery = () => {
@@ -9,4 +9,4 @@ const Delivery = () => {
   );
 };
 
-export default Delivery;
+export default memo(Delivery);

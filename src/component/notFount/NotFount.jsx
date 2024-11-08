@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useNavigate } from "react-router-dom";
 import "./notFout.css";
 
@@ -20,4 +20,4 @@ const NotFount = () => {
   );
 };
 
-export default NotFount;
+export default memo(NotFount);

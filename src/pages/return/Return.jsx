@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./reurn.css";
 import { NavLink } from "react-router-dom";
 import { RETURN__LIST } from "../../static";
@@ -36,4 +36,4 @@ const Return = () => {
   );
 };
 
-export default Return;
+export default memo(Return);

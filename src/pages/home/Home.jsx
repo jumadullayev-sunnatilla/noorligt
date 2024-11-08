@@ -1,7 +1,12 @@
-import React from "react";
+import React, { memo } from "react";
+import SWIPER from "../../component/swiper/SWIPER.JSX";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <SWIPER />
+    </div>
+  );
 };
 
-export default Home;
+export default memo(Home);

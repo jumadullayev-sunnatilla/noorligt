@@ -1,0 +1,38 @@
+.company {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  flex-wrap: wrap;
+}
+.company__head__list {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 70px;
+  width: 500px;
+  margin-bottom: 20px;
+}
+.company__text {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #454545;
+}
+@media only screen and (max-width: 550px) {
+  .company__head__list {
+    max-width: 300px;
+    background-color: blue;
+    padding: 20px;
+  }
+  .company__text {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .company__head__list {
+    max-width: 200px;
+  }
+}

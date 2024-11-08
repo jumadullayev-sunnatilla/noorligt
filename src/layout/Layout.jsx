@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
 import { Outlet } from "react-router-dom";
@@ -15,4 +15,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default memo(Layout);
