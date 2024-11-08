@@ -8,7 +8,7 @@ import Layout from "../layout/Layout";
 import Delivery from "../pages/delivery/Delivery";
 import Return from "../pages/return/Return";
 import Guarantees from "../pages/guarantees/Guarantees";
-import Notfount from "../pages/notFount/Notfount.jsx";
+import NotFount from "./notFount/NotFount.jsx";
 
 const Router = () => {
   return (
@@ -22,8 +22,8 @@ const Router = () => {
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/return" element={<Return />} />
           <Route path="/guarantees" element={<Guarantees />} />
+          <Route path="*" element={<NotFount />} />
         </Route>
-        <Route path="*" element={<Notfount />} />
       </Routes>
     </>
   );
