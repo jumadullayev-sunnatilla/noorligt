@@ -1,0 +1,42 @@
+.notFount {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.notFount__title {
+  font-size: 427px;
+  color: #ededed;
+  font-weight: 700;
+}
+.notFount__btn {
+  padding: 14px 62px;
+  border: none;
+  border-radius: 23px;
+  background-color: #454545;
+  margin-top: 10px;
+  color: white;
+  transition: all 0.2s;
+}
+.notFount__btn:hover {
+  background-color: #45454598;
+}
+@media (max-width: 720px) {
+  .notFount__title {
+    font-size: 227px;
+  }
+}
+@media (max-width: 400px) {
+  .notFount__title {
+    font-size: 100px;
+  }
+  .notFount__text {
+    text-align: center;
+    font-size: 16px;
+  }
+  .notFount__btn {
+    padding: 8px 30px;
+  }
+}

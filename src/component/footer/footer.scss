@@ -1,0 +1,22 @@
+footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  color: #a2a2a2;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+.footer__visa {
+  width: 210px;
+  height: 39px;
+}
+.footer__bolim {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 300px;
+  margin-bottom: 30px;
+}

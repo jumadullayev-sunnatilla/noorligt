@@ -1,0 +1,12 @@
+.delivery {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+.delivery__main {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
