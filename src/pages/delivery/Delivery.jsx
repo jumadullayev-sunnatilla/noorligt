@@ -1,12 +1,11 @@
 import React from "react";
 import DeliveryJob from "../../component/deliveryJob/DeliveryJob";
-import Iframe from "../../component/iframe/Iframe";
+import "./deliveryJob.css";
 
 const Delivery = () => {
   return (
     <>
       <DeliveryJob />;
-      <Iframe />
     </>
   );
 };
