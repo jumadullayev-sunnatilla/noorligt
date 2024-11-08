@@ -8,7 +8,7 @@ import Layout from "../layout/Layout";
 import Delivery from "../pages/delivery/Delivery";
 import Return from "../pages/return/Return";
 import Guarantees from "../pages/guarantees/Guarantees";
-import Notfount from "../pages/notFount/NotFount";
+import Notfount from "../pages/notFount/Notfount.jsx";
 
 const Router = () => {
   return (
