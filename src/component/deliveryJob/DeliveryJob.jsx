@@ -12,7 +12,7 @@ const DeliveryJob = () => {
       <p className="delivery__item-text font-manrope">{item.text}</p>
     </div>
   ));
-
+  // sunnat
   return (
     <div className="containerMain delivery">
       <div className="return__head">
