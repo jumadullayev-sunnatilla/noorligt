@@ -1,5 +1,5 @@
 import React from "react";
-import "./DeliveryJob.css";
+import "./deliveryJob.css";
 import { NavLink } from "react-router-dom";
 import { DELIVERY__LIST } from "../../static";
 
