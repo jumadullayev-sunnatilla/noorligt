@@ -8,6 +8,7 @@ import Layout from "../layout/Layout";
 import Delivery from "../pages/delivery/Delivery";
 import Return from "../pages/return/Return";
 import Guarantees from "../pages/guarantees/Guarantees";
+import Detail from "./detail/Detail.jsx";
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
           <Route path="/return" element={<Return />} />
           <Route path="/guarantees" element={<Guarantees />} />
           <Route path="*" element={<NotFount />} />
+          <Route path="/product/:id" element={<Detail />} />
         </Route>
       </Routes>
     </>
