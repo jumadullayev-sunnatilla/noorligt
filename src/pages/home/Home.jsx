@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="containerMain">
       <SWIPER />
-      <Product />
+      {/* <Product /> */}
     </div>
   );
 };

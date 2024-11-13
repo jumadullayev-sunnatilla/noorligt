@@ -1,0 +1,227 @@
+.header {
+  padding: 0px 20px;
+  .sub-header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    &__collection {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    &__link {
+      font-size: 16px;
+      color: #454545;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    &__link:hover {
+      color: #45454599;
+    }
+    &__phone {
+      font-size: 16px;
+      color: #454545;
+      span {
+        opacity: 0.5;
+        margin-left: 25px;
+      }
+    }
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    gap: 30px;
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        font-size: 25px;
+        font-weight: 500;
+        color: #454545;
+      }
+    }
+    &__category-btn {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 40px;
+      background: #454545;
+      color: #fff;
+      font-size: 16px;
+      svg {
+        font-size: 25px;
+      }
+    }
+    &__search {
+      flex: 1;
+      border: 1px solid #250489;
+      height: 50px;
+      border-radius: 40px;
+      display: flex;
+      input {
+        flex: 1;
+        border: 1px s;
+        outline: none;
+        border-radius: 40px 0 0 40px;
+        text-indent: 25px;
+        &::placeholder {
+          opacity: 0.5;
+        }
+      }
+      button {
+        width: 60px;
+        border: none;
+        background: transparent;
+        border-radius: 0 40px 40px 0;
+        font-size: 25px;
+      }
+    }
+    &__actions {
+      display: flex;
+      gap: 31px;
+      &-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        svg {
+          font-size: 35px;
+        }
+        span {
+          font-size: 12px;
+          color: #454545;
+        }
+      }
+    }
+    &__gamburger {
+      display: none;
+    }
+  }
+  .none {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .header {
+    &__overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 90;
+      background: #0005;
+    }
+    .sub-header {
+      position: fixed;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 30px;
+      top: 0;
+      left: -350px;
+      background: #fff;
+      border-right: 1px solid #ddd;
+      width: 350px;
+      height: 100vh;
+      z-index: 100;
+      transition: 0.6s;
+      &__collection {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      &__phone {
+        span {
+          display: none;
+        }
+      }
+    }
+    .sub-header.open {
+      left: 0;
+    }
+    .navbar {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 10px;
+      gap: 10px;
+      justify-content: space-between;
+      &__category-btn {
+        padding: 8px 18px;
+        span {
+          display: none;
+        }
+      }
+      &__search {
+        flex: auto;
+        width: 100%;
+        height: 42px;
+      }
+      &__actions {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #ffffff;
+        border-top: 1px solid #b6b1b1;
+        z-index: 10;
+        width: 100%;
+        height: 60px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .none {
+        display: flex;
+      }
+      &__gamburger {
+        display: flex;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    .sub-header {
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    .navbar {
+      &__logo {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+      &__category-btn {
+        padding: 5px 12px;
+        span {
+          display: none;
+        }
+        svg {
+          font-size: 20px;
+        }
+      }
+
+      &__actions {
+        &-link {
+          svg {
+            font-size: 20px;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
