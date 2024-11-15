@@ -106,7 +106,7 @@ const Header = () => {
               <CiHome />
               <span>Home</span>
             </Link>
-            <Link to={`/`} className="navbar__actions-link">
+            <Link to={"/favourites"} className="navbar__actions-link">
               <CiHeart />
               <span>Избранное</span>
             </Link>

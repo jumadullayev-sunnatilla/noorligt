@@ -1,0 +1,23 @@
+.detail {
+  border: 1-x solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-img {
+    width: 500px;
+    height: 600px;
+    object-fit: contain;
+  }
+  &-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    width: 400px;
+  }
+  &-title {
+    font-size: 30px;
+    color: #454545;
+    font-weight: 700;
+  }
+}

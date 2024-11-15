@@ -47,8 +47,11 @@
   &__discoutPrice {
     font-size: 24px;
   }
+  &__detail {
+    width: 100%;
+  }
   &__wishlist {
-    svg {
+    position: absolute svg {
       font-size: 25px;
     }
   }

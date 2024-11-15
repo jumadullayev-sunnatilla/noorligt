@@ -8,7 +8,8 @@ import Layout from "@/layout/Layout";
 import Delivery from "@/pages/delivery/Delivery";
 import Return from "@/pages/return/Return";
 import Guarantees from "@/pages/guarantees/Guarantees";
-import Detail from "../pages/detail/Deatil";
+import Detail from "../pages/detail/Detail";
+import Favourites from "../pages/favorurites/Favourites";
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/return" element={<Return />} />
+          <Route path="/favourites" element={<Favourites />} />
           <Route path="/guarantees" element={<Guarantees />} />
           <Route path="*" element={<NotFount />} />
           <Route path="/product/:id" element={<Detail />} />

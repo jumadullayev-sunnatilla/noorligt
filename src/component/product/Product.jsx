@@ -9,19 +9,20 @@ import { FaRegHeart } from "react-icons/fa";
 import "./Product.scss";
 import Loading from "../loading/Loading";
 import Model from "../model/Model.jsx";
-import { Link } from "react-router-dom";
+import { Link, useInRouterContext } from "react-router-dom";
+import { useStateValue } from "../../context/index.jsx";
+import { v4 as uuidv4 } from "uuid";
 
-const Product = () => {
+const Product = ({ data, loading }) => {
+  const [state, dispatch] = useStateValue();
   const [show, setShow] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const { data, error, loading } = useFetch(`/products`);
-  console.log(data);
   const productItem = data?.map((item) => (
-    <div key={item.id} className="product__card">
+    <div key={uuidv4()} className="product__card">
       <img
         onClick={() => {
           setSelectedProduct(item);
@@ -31,7 +32,7 @@ const Product = () => {
         src={item.url}
         alt=""
       />
-      <Link to={`/product/${item.id}`}>
+      <Link to={``} className={"product__detail"}>
         <h3 className="product__title">{item.title}</h3>
 
         <div className="product__main">
@@ -40,13 +41,20 @@ const Product = () => {
             <p className="product__discoutPrice">{item.discountprice}</p>
           </div>
           <div className="product__wishlist">
-            <FaRegHeart />
+            <button
+              onClick={() =>
+                dispatch({ type: "ADD__WISHLIST", payload: { item } })
+              }
+            >
+              <FaRegHeart />
+            </button>
             <SlBasket />
           </div>
         </div>
       </Link>
     </div>
   ));
+  console.log(data);
 
   return (
     <>
@@ -65,6 +73,7 @@ const Product = () => {
             </div>
           </Model>
         )}
+
         <div className="product__wrapper">{productItem}</div>
       </div>
     </>
