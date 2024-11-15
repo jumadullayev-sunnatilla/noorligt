@@ -1,7 +1,7 @@
 import React, { memo, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./header.scss";
-import { slide as Menu } from "react-burger-menu";
+import { IoMdCloseCircle } from "react-icons/io";
 // rasmlar
 import logo from "../../assets/norlihtIcon.png";
 import gamburger__icon from "../../assets/gamburger__icon.png";
@@ -27,6 +27,14 @@ const Header = () => {
           ></div>
         )}
         <div className={`sub-header ${isOpen ? "open" : ""}`}>
+          <div className="sub-header__close">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="sub-header__close-btn"
+            >
+              <IoMdCloseCircle />
+            </button>
+          </div>
           <ul className="sub-header__collection">
             <li>
               <NavLink className={"sub-header__link"} to={"/about"}>

@@ -27,6 +27,9 @@
         margin-left: 25px;
       }
     }
+    &__close {
+      display: none;
+    }
   }
   .navbar {
     display: flex;
@@ -130,10 +133,21 @@
       height: 100vh;
       z-index: 100;
       transition: 0.6s;
+      overflow-y: auto;
       &__collection {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
+      }
+      &__close {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+        border: 1px solid red($color: #000000);
+        svg {
+          color: #454545;
+        }
       }
 
       &__phone {

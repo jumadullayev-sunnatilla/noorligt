@@ -30,3 +30,8 @@
 .carousel__carousel ::-webkit-scrollbar {
   display: none;
 }
+@media (max-width: 500px) {
+  .carousel__title {
+    font-size: 25px;
+  }
+}

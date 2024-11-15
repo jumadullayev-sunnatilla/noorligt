@@ -72,3 +72,35 @@ export const COMPANY__TEXT = [
   "Интернет-магазин NORNLIGHT предлагает широкий ассортимент светильников для освещения вашего дома или офиса. У нас вы найдете разнообразные модели светильников, от современных и стильных до классических и элегантных. Мы предлагаем качественные и надежные светильники от лучших производителей, которые подарят вам комфорт и уют",
   "Интернет-магазин NORNLIGHT предлагает широкий ассортимент светильников для освещения вашего дома или офиса. У нас вы найдете разнообразные модели светильников, от современных и стильных до классических и элегантных. Мы предлагаем качественные и надежные светильники от лучших производителей, которые подарят вам комфорт и уют",
 ];
+import catalog1 from "../assets/catalog1.png";
+import catalog2 from "../assets/catalog2.png";
+import catalog3 from "../assets/catalog3.png";
+import catalog4 from "../assets/catalog4.png";
+import catalog5 from "../assets/catalog5.png";
+import catalog6 from "../assets/catalog6.png";
+export const CATALOG__LIST = [
+  {
+    title: "Люстры",
+    image: catalog1,
+  },
+  {
+    title: "Светильники",
+    image: catalog2,
+  },
+  {
+    title: "Бра",
+    image: catalog3,
+  },
+  {
+    title: "Торшеры",
+    image: catalog4,
+  },
+  {
+    title: "Настольные",
+    image: catalog5,
+  },
+  {
+    title: "Споты",
+    image: catalog6,
+  },
+];

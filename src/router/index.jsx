@@ -8,7 +8,7 @@ import Layout from "@/layout/Layout";
 import Delivery from "@/pages/delivery/Delivery";
 import Return from "@/pages/return/Return";
 import Guarantees from "@/pages/guarantees/Guarantees";
-import Detail from "@/component/detail/Detail.jsx";
+import Detail from "../pages/detail/Deatil";
 
 const Router = () => {
   return (
