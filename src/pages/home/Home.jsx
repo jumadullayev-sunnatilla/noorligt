@@ -13,7 +13,7 @@ const Home = () => {
       {/* <SWIPER /> */}
       <Catalog />
       <Carousel />
-      <Product data={data} loading={loading} />
+      <Product data={data} loading={loading} error={error} />
     </div>
   );
 };

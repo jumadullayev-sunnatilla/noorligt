@@ -1,23 +1,150 @@
 .detail {
   border: 1-x solid red;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
+  padding: 20px;
   &-img {
-    width: 500px;
+    width: 650px;
     height: 600px;
     object-fit: contain;
+    border: 1px solid #45454530;
   }
   &-main {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    width: 400px;
+    width: 555px;
   }
   &-title {
-    font-size: 30px;
+    font-size: 40px;
     color: #454545;
-    font-weight: 700;
+    font-weight: 500;
+  }
+  &__stock {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    &-main {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #b3b3b3;
+      }
+      span {
+        color: green;
+      }
+    }
+    &-link {
+      display: flex;
+      gap: 1px;
+
+      a {
+        padding: 5px;
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &__prise {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    &-prew {
+      font-size: 40px;
+    }
+    &-old {
+      font-size: 18px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 26px;
+    align-items: center;
+    &-count {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      border: 1px solid #454545;
+      border-radius: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+      button {
+        font-size: 20px;
+        padding: 12px;
+      }
+      p {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+    &-basket {
+      padding: 16px 50px;
+      border-radius: 12px;
+      background: #454545;
+      border: none;
+      color: #fff;
+    }
+    &-basket:hover {
+      cursor: pointer;
+      background-color: #969494;
+    }
+    &-favoruites {
+      padding: 10px;
+      svg {
+        font-size: 45px;
+      }
+    }
+  }
+}
+.home-link {
+  padding: 20px;
+  margin-top: 60px;
+  span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #454545;
+    svg {
+      font-size: 25px;
+    }
+  }
+}
+@media (max-width: 1250px) {
+  .detail {
+    &-img {
+      width: 500px;
+      height: 400px;
+    }
+    &-main {
+      width: 400px;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .detail {
+    padding-left: 50px;
+    padding-right: 50px;
+    &-img {
+      width: 100%;
+    }
+    &-main {
+      margin-top: 30px;
+      width: 100%;
+    }
   }
 }

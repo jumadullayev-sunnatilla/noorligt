@@ -3,13 +3,13 @@ import axios from "../api";
 export const useFetch = (path, params = {}, deeps = []) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
   useEffect(() => {
     setLoading(true);
     axios
       .get(path, { params })
       .then((res) => setData(res.data))
-      .catch((err) => setError(err))
+      .catch((err) => setError(true))
       .finally(() => setLoading(false));
   }, [...deeps]);
   return { data, error, loading };

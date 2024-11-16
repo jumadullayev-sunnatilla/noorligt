@@ -1,58 +1,65 @@
 .product {
   margin-top: 40px;
-  padding: 0 20px;
+  padding: 0;
   margin-bottom: 40px;
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    row-gap: 10px;
   }
   &__card {
-    border: 1px solid #454545;
     border-radius: 10px;
     width: 300px;
-    height: 400px;
-    padding: 10px;
+    height: 395px;
+    padding: 11px 11px 28px 32px;
     transition: all 0.2s;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
   }
-  &__card:hover {
-    background: #7c7b7b;
-  }
+
   &__img {
-    width: 100%;
+    width: 220px;
     height: 250px;
     object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
   }
   &__title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: 22px;
     color: #454545;
+    margin-top: 20px;
   }
   &__main {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    align-items: center;
+    align-items: flex-end;
   }
   &__oldPrice {
     color: #454545;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: line-through;
-    font-size: 14px;
+    font-size: 12px;
   }
   &__discoutPrice {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 700;
   }
   &__detail {
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__wishlist {
-    position: absolute svg {
-      font-size: 25px;
+    button {
+      padding: 3px;
     }
   }
   &__titleM {
@@ -73,5 +80,41 @@
   }
   &__modal-title {
     font-size: 45px;
+  }
+  &__basket {
+    position: absolute;
+    padding: 9px 20px;
+    background: #454545;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+
+    border: none;
+    border-radius: 100px;
+    svg {
+      color: #fff;
+      background: transparent;
+      font-size: 30px;
+    }
+  }
+  &__basket:hover {
+    background-color: black;
+  }
+  &__wish {
+    position: absolute;
+    z-index: 1;
+    bottom: 85%;
+    left: 100%;
+    padding: 10px;
+    background: transparent;
+    svg {
+      font-size: 30px;
+    }
+  }
+  &__connect {
+    margin: 0 auto;
+
+    width: 400px;
+    height: 300px;
   }
 }
