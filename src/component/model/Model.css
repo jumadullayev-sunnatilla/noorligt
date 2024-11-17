@@ -8,6 +8,8 @@
   z-index: 19;
 }
 .modal-content {
+  width: 70%;
+
   position: fixed;
   border-radius: 40px;
   top: 40%;

@@ -68,18 +68,44 @@
     font-weight: 800;
   }
   &__modal {
-    padding: 6px;
-    width: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
     height: 600px;
     border-radius: 40px;
-  }
-  &__modal-img {
-    width: 100%;
-    height: 80%;
-    object-fit: contain;
-  }
-  &__modal-title {
-    font-size: 45px;
+    &-close {
+      position: absolute;
+      padding: 10px;
+      border: none;
+      z-index: 10;
+      top: 2%;
+      right: 2%;
+    }
+    &-img {
+      width: 100%;
+      height: 60%;
+      object-fit: contain;
+    }
+    &-title {
+      font-size: 45px;
+    }
+    &-link {
+      width: 100%;
+      text-align: center;
+    }
+    &-btn {
+      padding: 14px 50px;
+      border: 1px solid #454545;
+      border-radius: 100px;
+      color: #454545;
+      transition: all 0.3s;
+    }
+    &-btn:hover {
+      background-color: #454545;
+      color: #fff;
+    }
   }
   &__basket {
     position: absolute;
@@ -125,6 +151,15 @@
     }
     &__card {
       background: #0b3cff;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .product {
+    &__modal {
+      &-title {
+        font-size: 25px;
+      }
     }
   }
 }

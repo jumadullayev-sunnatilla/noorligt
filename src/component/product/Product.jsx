@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { SlBasket } from "react-icons/sl";
 import { FaRegHeart } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import "./Product.scss";
 import Loading from "../loading/Loading";
 import Model from "../model/Model.jsx";
-import { Link, useInRouterContext } from "react-router-dom";
+import { Link, NavLink, useInRouterContext } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import noInternet from "../../assets/noInternet.png";
 
@@ -62,12 +63,29 @@ const Product = ({ data, loading, error }) => {
         {show && selectedProduct && (
           <Model close={setShow}>
             <div className="product__modal">
+              <button
+                onClick={() => setShow(false)}
+                className="product__modal-close"
+              >
+                <IoClose />
+              </button>
               <img
                 className="product__modal-img"
                 src={selectedProduct.url}
                 alt=""
               />
               <h1 className="product__modal-title">{selectedProduct.title}</h1>
+              <p className="product__modal-desc">
+                {selectedProduct.description}
+              </p>
+              <NavLink
+                to={`/product/${selectedProduct.id}`}
+                className={`product__modal-link`}
+              >
+                <button className="product__modal-btn">
+                  <span>Смотреть больше</span>
+                </button>
+              </NavLink>
             </div>
           </Model>
         )}
