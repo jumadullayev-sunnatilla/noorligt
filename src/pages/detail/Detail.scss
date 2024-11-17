@@ -95,10 +95,14 @@
       background: #454545;
       border: none;
       color: #fff;
+      transition: all 0.2s;
+      border: 3px solid #454545;
+      font-weight: 700;
     }
     &-basket:hover {
+      color: #454545;
       cursor: pointer;
-      background-color: #969494;
+      background-color: #ffffff;
     }
     &-favoruites {
       padding: 10px;

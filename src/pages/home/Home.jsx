@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="containerMain">
       {/* <SWIPER /> */}
-      <Catalog />
+      <Catalog count={6} specialPage={false} />
       <Carousel />
       <Product data={data} loading={loading} error={error} />
     </div>

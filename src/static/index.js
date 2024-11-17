@@ -103,4 +103,16 @@ export const CATALOG__LIST = [
     title: "Споты",
     image: catalog6,
   },
+  {
+    title: "Споты",
+    image: catalog6,
+  },
+  {
+    title: "Споты",
+    image: catalog6,
+  },
+  {
+    title: "Споты",
+    image: catalog6,
+  },
 ];

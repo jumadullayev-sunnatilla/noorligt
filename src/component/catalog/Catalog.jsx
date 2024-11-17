@@ -4,8 +4,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import "./Catalog.scss";
 import { CATALOG__LIST } from "../../static";
 
-const Catalog = () => {
-  const catalogCard = CATALOG__LIST.map((item, key) => (
+const Catalog = ({ count, specialPage }) => {
+  const limitedCatalog = CATALOG__LIST.slice(0, count);
+
+  const catalogCard = limitedCatalog.map((item, key) => (
     <div className="catalog__wrapper-card" key={key}>
       <div className="catalog__wrapper-main">
         <h2 className="catalog__wrapper-title">{item.title}</h2>
@@ -23,8 +25,12 @@ const Catalog = () => {
     <div className="containerMain catalog font-manrope">
       <div className="catalog__top">
         <h1 className="catalog__top-title">Каталог</h1>
-        <NavLink>
-          <button className="catalog__top-btn">
+        <NavLink to={"/catalog"}>
+          <button
+            className={`catalog__top-btn ${
+              specialPage && `catalog__top-btn-none`
+            }`}
+          >
             <span>Весь каталог</span>
             <FaLongArrowAltRight />
           </button>

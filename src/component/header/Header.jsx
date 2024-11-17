@@ -89,11 +89,12 @@ const Header = () => {
 
             <span>NORNLIGHTS</span>
           </NavLink>
-
-          <button className="navbar__category-btn">
-            <CiMenuFries />
-            <span>Каталог</span>
-          </button>
+          <NavLink to={"/catalog"}>
+            <button className="navbar__category-btn">
+              <CiMenuFries />
+              <span>Каталог</span>
+            </button>
+          </NavLink>
           <div id="" className="navbar__search">
             <input className="" type="text" placeholder="Поиск по товарам" />
 

@@ -1,6 +1,5 @@
 .catalog {
-  margin-top: 80px;
-  margin-top: 40px;
+  margin-bottom: 40px;
 
   .catalog__top {
     display: flex;
@@ -31,6 +30,9 @@
     &-btn:hover {
       background-color: #7e7b7b;
     }
+    &-btn-none {
+      display: none;
+    }
   }
   .catalog__wrapper {
     display: flex;
@@ -47,6 +49,11 @@
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    &-card:hover {
+      background-color: #454545;
     }
     &-img {
       width: 180px;
@@ -91,6 +98,7 @@
   .catalog {
     .catalog__wrapper {
       padding: 0 25px;
+      justify-content: center;
     }
   }
 }

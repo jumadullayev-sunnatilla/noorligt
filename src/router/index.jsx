@@ -10,6 +10,7 @@ import Return from "@/pages/return/Return";
 import Guarantees from "@/pages/guarantees/Guarantees";
 import Detail from "../pages/detail/Detail";
 import Favourites from "../pages/favorurites/Favourites";
+import CatalogPage from "../pages/catalogPage/CatalogPage";
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
           <Route path="/guarantees" element={<Guarantees />} />
           <Route path="*" element={<NotFount />} />
           <Route path="/product/:id" element={<Detail />} />
+          <Route path="/catalog" element={<CatalogPage />} />
         </Route>
       </Routes>
     </>

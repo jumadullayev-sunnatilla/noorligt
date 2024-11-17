@@ -118,3 +118,20 @@
     height: 300px;
   }
 }
+@media (max-width: 1200px) {
+  .product {
+    &__wrapper {
+      justify-content: center;
+    }
+    &__card {
+      background: #0b3cff;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .product {
+    &__card {
+      width: 80%;
+    }
+  }
+}
