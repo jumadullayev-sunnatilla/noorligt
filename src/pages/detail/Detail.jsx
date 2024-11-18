@@ -13,8 +13,10 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { useFetch } from "../../hooks/useFEtch.js";
 import "./Detail.scss";
 import { MdOutlineNavigateNext } from "react-icons/md";
+import { useStateValue } from "../../context/index.jsx";
 
 const Detail = () => {
+  const [state, dispatch] = useStateValue();
   const params = useParams();
   const { data, error, loading } = useFetch(`products/${params.id}`);
 
@@ -91,8 +93,15 @@ const Detail = () => {
               <button className="detail__bottom-count-incc">+</button>
             </div>
             <button className="detail__bottom-basket">В корзину</button>
-            <button className="detail__bottom-favoruites">
-              <FaRegHeart />
+            <button
+              onClick={() => dispatch({ type: "ADD__WISHLIST", payload: data })}
+              className="detail__bottom-favoruites"
+            >
+              {state.wishlist?.some((i) => i.id === data?.id) ? (
+                <FaHeart />
+              ) : (
+                <FaRegHeart />
+              )}
             </button>
           </div>
         </div>

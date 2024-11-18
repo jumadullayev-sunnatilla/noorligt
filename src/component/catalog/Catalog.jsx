@@ -3,8 +3,11 @@ import { NavLink } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import "./Catalog.scss";
 import { CATALOG__LIST } from "../../static";
+import { useStateValue } from "../../context";
 
 const Catalog = ({ count, specialPage }) => {
+  const [state, dispatch] = useStateValue();
+
   const limitedCatalog = CATALOG__LIST.slice(0, count);
 
   const catalogCard = limitedCatalog.map((item, key) => (
@@ -25,6 +28,7 @@ const Catalog = ({ count, specialPage }) => {
     <div className="containerMain catalog font-manrope">
       <div className="catalog__top">
         <h1 className="catalog__top-title">Каталог</h1>
+
         <NavLink to={"/catalog"}>
           <button
             className={`catalog__top-btn ${

@@ -10,8 +10,10 @@ import { TbAntennaBars5 } from "react-icons/tb";
 import { SlBasket } from "react-icons/sl";
 import rasmGamburger from "../../assets/header__gamburger.png";
 import { tel } from "../../static";
+import { useStateValue } from "../../context";
 
 const Header = () => {
+  const [state, dispatch] = useStateValue();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -59,7 +61,7 @@ const Header = () => {
             </li>
 
             <li>
-              <NavLink className={"sub-header__link"} to={"*"}>
+              <NavLink className={"sub-header__link"} to={"/blog"}>
                 <span>Блог</span>
               </NavLink>
             </li>

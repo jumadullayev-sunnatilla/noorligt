@@ -11,6 +11,8 @@ import Guarantees from "@/pages/guarantees/Guarantees";
 import Detail from "../pages/detail/Detail";
 import Favourites from "../pages/favorurites/Favourites";
 import CatalogPage from "../pages/catalogPage/CatalogPage";
+import BlogPage from "../pages/blogPage/BlogPage";
+import ProductPage from "../pages/productPage/ProductPage";
 
 const Router = () => {
   return (
@@ -28,6 +30,8 @@ const Router = () => {
           <Route path="*" element={<NotFount />} />
           <Route path="/product/:id" element={<Detail />} />
           <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/product" element={<ProductPage />} />
         </Route>
       </Routes>
     </>

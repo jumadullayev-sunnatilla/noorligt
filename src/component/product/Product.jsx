@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import { SlBasket } from "react-icons/sl";
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart, FaLongArrowAltRight } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import "./Product.scss";
 import Loading from "../loading/Loading";
@@ -11,20 +11,30 @@ import Model from "../model/Model.jsx";
 import { Link, NavLink, useInRouterContext } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import noInternet from "../../assets/noInternet.png";
+import { useStateValue } from "../../context/index.jsx";
 
-const Product = ({ data, loading, error }) => {
-  const count = () => console.log("salom");
+const Product = ({ data, loading, error, count, specialPage }) => {
+  const [state, dispatch] = useStateValue();
+
   const [show, setShow] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   useEffect(() => {
     AOS.init();
   }, []);
+  const limitedProduct = data?.slice(0, count);
 
-  const productItem = data?.map((item) => (
+  const productItem = limitedProduct?.map((item) => (
     <div key={uuidv4()} className="product__card">
       <div className="relative">
-        <button onClick={() => count()} className="product__wish">
-          <FaRegHeart />
+        <button
+          onClick={() => dispatch({ type: "ADD__WISHLIST", payload: item })}
+          className="product__wish"
+        >
+          {state.wishlist?.some((i) => i.id === item.id) ? (
+            <FaHeart />
+          ) : (
+            <FaRegHeart />
+          )}
         </button>
         <img
           onClick={() => {
@@ -57,8 +67,20 @@ const Product = ({ data, loading, error }) => {
   return (
     <>
       <div className="product font-manrope">
-        <h2 className="product__titleM">Product</h2>
-        {loading && <Loading />}
+        <div className="product__top">
+          <h1 className="product__top-title">Продукт</h1>
+
+          <NavLink to={"/product"}>
+            <button
+              className={`product__top-btn ${
+                specialPage && `product__top-btn-none`
+              }`}
+            >
+              <span>Весь продукт</span>
+              <FaLongArrowAltRight />
+            </button>
+          </NavLink>
+        </div>
         {error && <img className="product__connect" src={noInternet} />}
         {show && selectedProduct && (
           <Model close={setShow}>

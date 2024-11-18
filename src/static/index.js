@@ -116,3 +116,32 @@ export const CATALOG__LIST = [
     image: catalog6,
   },
 ];
+// about us
+import us1 from "../assets/us1.png";
+import us4 from "../assets/us4.png";
+export const US__LIST = [
+  {
+    image: us1,
+    title: "Только проверенные бренды",
+    description: "Бренды, проверенные временем и качеством",
+  },
+  {
+    image: us1,
+    title: "Самые низкие цены",
+    description: "Ниже не будет нигде",
+  },
+  {
+    image: us4,
+    title: "Быстрая доствка",
+    description: "Бренды, проверенные временем и качеством",
+  },
+  {
+    image: us4,
+    title: "Большой ассортимент",
+    description: "Более 1000 товаров",
+  },
+];
+
+// blog us
+
+export const BLOG__LIST = [{}];
