@@ -14,6 +14,7 @@ import { useStateValue } from "../../context";
 
 const Header = () => {
   const [state, dispatch] = useStateValue();
+  console.log(state.wishlist.length);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -110,16 +111,29 @@ const Header = () => {
               <span>Home</span>
             </Link>
             <Link to={"/favourites"} className="navbar__actions-link">
-              <CiHeart />
-              <span>Избранное</span>
+              <div>
+                <CiHeart />
+              </div>
+
+              <span>
+                Избранное{" "}
+                {state.wishlist.length > 0 && (
+                  <sup className="navbar__sup">{state.wishlist.length}</sup>
+                )}
+              </span>
             </Link>
             <Link to={`/`} className="navbar__actions-link">
               <TbAntennaBars5 />
               <span>Сравнение</span>
             </Link>
-            <Link to={`/`} className="navbar__actions-link">
+            <Link to={`/korzinka`} className="navbar__actions-link">
               <SlBasket />
-              <span>Корзина</span>
+              <span>
+                Корзина
+                {state.cart.length > 0 && (
+                  <sup className="navbar__sup">{state.cart.length}</sup>
+                )}
+              </span>
             </Link>
           </div>
         </nav>

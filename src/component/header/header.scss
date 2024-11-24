@@ -104,6 +104,15 @@
     &__gamburger {
       display: none;
     }
+    &__sup {
+      padding: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+      background-color: #454545;
+      border-radius: 10px;
+      font-size: 10px;
+      color: #fff;
+    }
   }
   .none {
     display: none;

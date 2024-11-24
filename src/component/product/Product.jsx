@@ -15,6 +15,7 @@ import { useStateValue } from "../../context/index.jsx";
 
 const Product = ({ data, loading, error, count, specialPage }) => {
   const [state, dispatch] = useStateValue();
+  console.log(state);
 
   const [show, setShow] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -48,21 +49,23 @@ const Product = ({ data, loading, error, count, specialPage }) => {
       </div>
       <Link to={`/product/${item.id}`} className={"product__detail"}>
         <h3 className="product__title font-manrope">{item.title}</h3>
-
-        <div className="product__main">
-          <div className="product__prices">
-            <p className="product__oldPrice">{item.previousprice} $$$</p>
-            <p className="product__discoutPrice">{item.discountprice}$$$</p>
-          </div>
-
-          <button className="product__basket">
-            <SlBasket />
-          </button>
-        </div>
       </Link>
+
+      <div className="product__main">
+        <div className="product__prices">
+          <p className="product__oldPrice">{item.previousprice} $$$</p>
+          <p className="product__discoutPrice">{item.discountprice}$$$</p>
+        </div>
+
+        <button
+          onClick={() => dispatch({ type: "ADD__CART", payload: item })}
+          className="product__basket"
+        >
+          <SlBasket />
+        </button>
+      </div>
     </div>
   ));
-  console.log(data);
 
   return (
     <>

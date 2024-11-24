@@ -13,6 +13,7 @@ import Favourites from "../pages/favorurites/Favourites";
 import CatalogPage from "../pages/catalogPage/CatalogPage";
 import BlogPage from "../pages/blogPage/BlogPage";
 import ProductPage from "../pages/productPage/ProductPage";
+import KorzinkaPage from "../pages/korzinkaPage/KorzinkaPage";
 
 const Router = () => {
   return (
@@ -32,6 +33,7 @@ const Router = () => {
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/product" element={<ProductPage />} />
+          <Route path="/korzinka" element={<KorzinkaPage />} />
         </Route>
       </Routes>
     </>

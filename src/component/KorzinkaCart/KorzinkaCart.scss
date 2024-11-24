@@ -1,0 +1,66 @@
+.korzinka {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f2f2f2;
+  padding: 45px;
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  hr {
+    color: #000;
+    font-weight: 900;
+  }
+  &__cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: #454545;
+    &-image {
+      padding: 10px 15px;
+      background-color: #fff;
+      border-radius: 15px;
+    }
+    &-img {
+      width: 49px;
+      height: 61px;
+      background-color: #fff;
+    }
+    &-data {
+      width: 170px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    &-all-price {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 22px;
+    }
+    &-desc {
+      width: 250px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &-count {
+      display: flex;
+      align-items: center;
+
+      button {
+        padding: 20px;
+        font-size: 20px;
+      }
+    }
+    &-del {
+      svg {
+        font-size: 30px;
+        color: #454545;
+      }
+    }
+  }
+}
+.empty__cart {
+  margin: 10px auto;
+}

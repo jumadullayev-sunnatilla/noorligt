@@ -143,5 +143,39 @@ export const US__LIST = [
 ];
 
 // blog us
+import blog1 from "../assets/blog1.png";
+import blog2 from "../assets/blog2.png";
+import blog3 from "../assets/blog3.png";
 
-export const BLOG__LIST = [{}];
+export const BLOG__LIST = [
+  {
+    image: blog1,
+    title: "Как правильно освещать дом снаружи?",
+    date: "01.01.2024",
+  },
+  {
+    image: blog2,
+    title: "Как правильно освещать дом снаружи?",
+    date: "01.01.2024",
+  },
+  {
+    image: blog3,
+    title: "Как правильно освещать дом снаружи?",
+    date: "01.01.2024",
+  },
+  {
+    image: blog1,
+    title: "Как правильно освещать дом снаружи?",
+    date: "01.01.2024",
+  },
+  {
+    image: blog2,
+    title: "Как правильно освещать дом снаружи?",
+    date: "01.01.2024",
+  },
+  {
+    image: blog3,
+    title: "Как правильно освещать дом снаружи?",
+    date: "01.01.2024",
+  },
+];

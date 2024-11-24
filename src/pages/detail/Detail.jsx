@@ -92,7 +92,12 @@ const Detail = () => {
               <p className="detail__bottom-count-data">1</p>
               <button className="detail__bottom-count-incc">+</button>
             </div>
-            <button className="detail__bottom-basket">В корзину</button>
+            <button
+              onClick={() => dispatch({ type: "ADD__CART", payload: data })}
+              className="detail__bottom-basket"
+            >
+              В корзину
+            </button>
             <button
               onClick={() => dispatch({ type: "ADD__WISHLIST", payload: data })}
               className="detail__bottom-favoruites"
