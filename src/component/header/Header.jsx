@@ -122,9 +122,9 @@ const Header = () => {
                 )}
               </span>
             </Link>
-            <Link to={`/`} className="navbar__actions-link">
+            <Link to={`/admin`} className="navbar__actions-link">
               <TbAntennaBars5 />
-              <span>Сравнение</span>
+              <span>Admin</span>
             </Link>
             <Link to={`/korzinka`} className="navbar__actions-link">
               <SlBasket />
