@@ -17,6 +17,8 @@ import KorzinkaPage from "../pages/korzinkaPage/KorzinkaPage";
 import Admin from "../pages/admin/Admin";
 import CreateElement from "../component/createElement/CreateElement";
 import ManageElement from "../component/manageElement/ManageElement";
+import Login from "../component/login/Login";
+import Auth from "../pages/auth/Auth";
 
 const Router = () => {
   return (
@@ -37,9 +39,13 @@ const Router = () => {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/product" element={<ProductPage />} />
           <Route path="/korzinka" element={<KorzinkaPage />} />
-          <Route path="/createEl" element={<CreateElement />} />
-          <Route path="/manageEl" element={<ManageElement />} />
-          <Route path="/admin" element={<Admin />} />
+        </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Auth />}>
+          <Route path="admin" element={<Admin />}>
+            <Route path="createEl" element={<CreateElement />} />
+            <Route path="manageEl" element={<ManageElement />} />
+          </Route>
         </Route>
       </Routes>
     </>

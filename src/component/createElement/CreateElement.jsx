@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { NavLink } from "react-router-dom";
 import AdminRoute from "../adminRoute/AdminRoute";
 import axios from "../../api";
 import "./CreateElement.scss";
@@ -39,7 +38,6 @@ const CreateElement = () => {
   };
   return (
     <div className="containerMain font-manrope">
-      <AdminRoute />
       <div className="create">
         <h1 className="create__title">Create el</h1>
         <form

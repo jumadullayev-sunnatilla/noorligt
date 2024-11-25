@@ -6,6 +6,9 @@ const Admin = () => {
   return (
     <div>
       <AdminRoute />
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
 };

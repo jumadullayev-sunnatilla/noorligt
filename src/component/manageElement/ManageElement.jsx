@@ -4,9 +4,8 @@ import AdminRoute from "../adminRoute/AdminRoute";
 
 const ManageElement = () => {
   return (
-    <div>
-      <AdminRoute />
-      <div>ManageElement</div>;
+    <div className="containerMain">
+      <div>ManageElement</div>
     </div>
   );
 };
