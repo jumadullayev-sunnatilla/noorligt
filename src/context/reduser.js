@@ -3,6 +3,7 @@ export const initialState = JSON.parse(localStorage.getItem("storage")) || {
   wishlist: [],
   bool: false,
   cart: [],
+  token: null,
 };
 export const reducer = (state, action) => {
   let result = state;
@@ -71,6 +72,10 @@ export const reducer = (state, action) => {
 
     case "CLEAR__CART":
       result = { ...state, cart: [] };
+      localStorage.setItem("storage", JSON.stringify(result));
+      return result;
+    case "ADD__TOKEN":
+      result = { ...state, token: action.payload };
       localStorage.setItem("storage", JSON.stringify(result));
       return result;
 

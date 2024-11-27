@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import "./header.scss";
 import { IoMdCloseCircle } from "react-icons/io";
 // rasmlar
+import { MdOutlineAccountCircle } from "react-icons/md";
+import { FiLock } from "react-icons/fi";
 import logo from "../../assets/norlihtIcon.png";
 import gamburger__icon from "../../assets/gamburger__icon.png";
 import { CiSearch, CiHeart, CiMenuFries, CiHome } from "react-icons/ci";
@@ -122,10 +124,18 @@ const Header = () => {
                 )}
               </span>
             </Link>
-            <Link to={`/admin`} className="navbar__actions-link">
-              <TbAntennaBars5 />
-              <span>Admin</span>
-            </Link>
+            {state.token ? (
+              <Link to={`/admin`} className="navbar__actions-link">
+                <MdOutlineAccountCircle />
+                <span>Admin</span>
+              </Link>
+            ) : (
+              <Link to={"/admin"} className="navbar__actions-link">
+                <FiLock />
+                <span>Sign in</span>
+              </Link>
+            )}
+
             <Link to={`/korzinka`} className="navbar__actions-link">
               <SlBasket />
               <span>
