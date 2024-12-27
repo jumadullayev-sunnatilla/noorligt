@@ -45,16 +45,41 @@ const CreateElement = () => {
           onSubmit={handleCreatreElement}
           action=""
         >
-          <input ref={titleEl} type="text" required placeholder="title" />
-          <input ref={imageEl} type="text" required placeholder="image__url" />
-          <input ref={priceEl} type="text" required placeholder="price" />
           <input
+            className="createInput"
+            ref={titleEl}
+            type="text"
+            required
+            placeholder="title"
+          />
+          <input
+            className="createInput"
+            ref={imageEl}
+            type="text"
+            required
+            placeholder="image__url"
+          />
+          <input
+            className="createInput"
+            ref={priceEl}
+            type="text"
+            required
+            placeholder="price"
+          />
+          <input
+            className="createInput"
             ref={descriptionEl}
             type="text"
             required
             placeholder="description"
           />
-          <input ref={stokcEl} type="number" required placeholder="stock___?" />
+          <input
+            className="createInput"
+            ref={stokcEl}
+            type="number"
+            required
+            placeholder="stock___?"
+          />
           <button>Create Element</button>
         </form>
       </div>
